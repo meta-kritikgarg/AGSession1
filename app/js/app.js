@@ -1,9 +1,9 @@
 var MyApp = angular.module('customerApp',[]);
 MyApp.controller('customerController' , function($scope,$http)
 {
-  $http.get('http://rest-service.guides.spring.io/greeting').
+  $http.get('http://localhost:8080/WSSession02/rest/res/employeelist').
         then(function(response) {
-            $scope.greeting = response.data;
+            $scope.greetings = response.data.Employee;
         });
-  $scope.orderProp = 'age';
+
 })
